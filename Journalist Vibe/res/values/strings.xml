@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">VideoRecorder</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="currSpeed">Curr. speed</string>
+    <string name="distravel">Dis. travelled</string>
+    <string name="maxg">Max. lateral G</string>
+    <string name="timeTaken">Time taken</string>
+    <string name="avgSpeed">Avg. speed</string>
+
+</resources>
