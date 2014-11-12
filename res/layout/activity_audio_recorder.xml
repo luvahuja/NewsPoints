@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/sound_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/ambi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="ambi" />
+
+        <Button
+            android:id="@+id/interview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/ambi"
+            android:text="interview" />
+
+        <Button
+            android:id="@+id/natural"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/interview"
+            android:text="natural" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu_tray"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/sound_details"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#66E6E6E6" >
+
+        <Button
+            android:id="@+id/source_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:text="source"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/source_audio"
+            android:text="Record"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:text="00:00:00" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <SlidingDrawer
+            android:id="@+id/menu_slider"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:content="@+id/menu_content"
+            android:handle="@+id/drag_handle"
+            android:orientation="vertical"
+            android:rotation="180"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/drag_handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher"
+                android:gravity="bottom"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/menu_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:rotation="180" >
+
+                <HorizontalScrollView
+                    android:id="@+id/hsv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:fillViewport="true"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/innerLay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="60dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#33FA5858"
+                            android:gravity="top|center"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:text="where did the incident took place" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@id/text1"
+                            android:background="#000000" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:background="#33FA5858"
+                            android:gravity="top|center"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:text="How many People are Injured" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@id/text2"
+                            android:background="#000000" />
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#33FA5858"
+                            android:gravity="top|center"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="4dp"
+                            android:text="How many died and how many are injured!" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@id/text1"
+                            android:background="#000000" />
+
+                        <TextView
+                            android:id="@+id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:background="#33FA5858"
+                            android:gravity="top|center"
+                            android:paddingTop="4dp"
+                            android:text="Did any authority provided help" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@id/text1"
+                            android:background="#000000" />
+
+                        <TextView
+                            android:id="@+id/text5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#33FA5858"
+                            android:gravity="top|center"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="5dp"
+                            android:text="Whos is under suspect for the mishap" />
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="10dp"
+                            android:layout_toRightOf="@id/text1"
+                            android:background="#000000" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <EditText
+                    android:id="@+id/text6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@id/hsv"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#33ffffff"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/scroll_left"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/prevbutton"
+                    android:text="Left" />
+
+                <Button
+                    android:id="@+id/scroll_right"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/nextbutton"
+                    android:text="Right" />
+            </RelativeLayout>
+        </SlidingDrawer>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/menu_tray"
+        android:layout_below="@id/linearLayout1"
+        android:background="@drawable/sfsu" />
+
+    <RelativeLayout
+        android:id="@+id/camera_type_tray"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_above="@id/menu_tray"
+        android:layout_alignParentLeft="true"
+        android:background="#33ffffff"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/interview_audio"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:text="interview"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/wide_audio"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/interview_audio"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:text="wide"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/extrawide_audio"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/wide_audio"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:text="Extra-Wide"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/establish_audio"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/extrawide_audio"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="0dp"
+            android:text="Establish"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/source_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/menu_tray"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="300dp"
+        android:layout_toRightOf="@id/camera_type_tray"
+        android:background="#44000000"
+        android:visibility="invisible" >
+
+        <RadioButton
+            android:id="@+id/source1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="source1" />
+
+        <RadioButton
+            android:id="@+id/source2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="source2" />
+
+        <RadioButton
+            android:id="@+id/source3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="source3" />
+    </RadioGroup>
+
+</RelativeLayout>
